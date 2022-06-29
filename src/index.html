@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>前端监控SDK</title>
-  <link rel="stylesheet" type="text/css" href="/ccc.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.js"></script>
 </head>
 
 <body>
   <div id="contaienr">
     <input id="successBtn" type="button" value="ajax成功请求" onclick="sendSuccess()">
     <input id="errorBtn" type="button" value="ajax失败请求" onclick="sendError()">
+    <input id="axiosErrorBtn" type="button" value="axios成功请求" onclick="axiosSendSuccess()">
+    <input id="axiosSuccessBtn" type="button" value="axios失败请求" onclick="axiosSendError()">
   </div>
 
   <script>
@@ -37,6 +39,30 @@
       }
       xhr.send()
     }
+
+    function axiosSendSuccess(){
+      axios({
+        method:"get",
+        url:"/success",
+        params:{
+          name:"yoyo"
+        }
+      }).then((response)=>{
+        console.log(response)
+      })
+    }
+    function axiosError(){
+      axios({
+        method:"get",
+        url:"/error",
+        params:{
+          name:"东方甄选"
+        }
+      }).then((response)=>{
+        console.log(response)
+      })
+    }
+
 
   </script>
 </body>
