@@ -1,6 +1,6 @@
 import getLastEvent from "../utils/getLastEvent";
 import getSelector from "../utils/getSelector";
-import SendTracker from "../utils/tracker";
+import tracker from "../utils/tracker";
 export function injectJsError() {
   // 监听全局未捕获的错误
   window.addEventListener("error",(event)=>{ // 错误事件对象
@@ -30,7 +30,7 @@ export function injectJsError() {
         selector:lastEvent?getSelector(lastEvent.path):""// 最后一个操作的元素
       }
     }
-    SendTracker.send(log)
+    tracker.send(log)
   },true)
 
   //  监听Promise报错

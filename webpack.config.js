@@ -10,7 +10,12 @@ module.exports = {
   devServer:{
     static:{
       directory: path.join(__dirname, 'dist'),
+    },
+    onBeforeSetupMiddleware:(devServer)=>{
+      devServer.app.get("/success",(req,res)=>{res.json({id:1})});
+      devServer.app.get("/error",(req,res)=>{res.sendStates(500)});
     }
+    
   },
   plugins:[
     new HtmlWebpackPlugin({
