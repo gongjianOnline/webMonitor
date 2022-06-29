@@ -7,7 +7,7 @@ class SendTracker{
     this.xhr = new XMLHttpRequest;
   }
   send(data){
-    console.log("tracker",data)
+    
   }
 }
 export default new SendTracker();
