@@ -19,7 +19,9 @@
       window.someVar.error = "error"
     }
     function promiseErrorClick(){
-
+      new Promise((resolve,reject)=>{
+        reject("error")
+      })
     }
 
 
