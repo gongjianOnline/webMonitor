@@ -1,5 +1,6 @@
-import tracker from "../utils/tracker"
-
+/**
+ * 监控ajax和axios 
+ */
 export default function injectXHR(){
   let XMLHttpRequest = window.XMLHttpRequest;
   let oldOpen = XMLHttpRequest.prototype.open;
