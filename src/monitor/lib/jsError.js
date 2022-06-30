@@ -1,3 +1,8 @@
+
+/**
+ * 全局JS OR Promise OR 资源加载 错误监控 
+ * 
+ * */
 import getLastEvent from "../utils/getLastEvent";
 import getSelector from "../utils/getSelector";
 import tracker from "../utils/tracker";

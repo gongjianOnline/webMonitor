@@ -1,3 +1,6 @@
+/**
+ * 用来监控白屏
+ */
 import tracker from '../utils/tracker';
 import onload from '../utils/onload';
 export function blankScreen() {
