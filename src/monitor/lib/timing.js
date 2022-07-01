@@ -85,8 +85,8 @@ export default function timing(){
       let paint_log = {
         kind:"experience", //用户体验指标,
         type:'paint', // 统计每个阶段的时间
-        firstPaint:FP.startTime, // 首次绘制时间
-        firstContentPaint:FCP.startTime, // 首次内容绘制时间
+        firstPaint:FP?.startTime || 0, // 首次绘制时间
+        firstContentPaint:FCP?.startTime || 0, // 首次内容绘制时间
         firstMeaningfulPaint:FMP?.startTime || 0, // 首次意义绘制时间
         largestContentfulPaint:LCP?.startTime || 0, //最大内容渲染时间
       }

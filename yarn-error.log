@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add mobile-detect
+
+PATH: 
+  E:\install\Git\mingw64\bin;E:\install\Git\usr\bin;C:\Users\programmer\bin;E:\install\vMware\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;E:\install\Git\cmd;E:\install\nvm;C:\Program Files\nodejs;E:\install;E:\install\flutter\flutter\bin;E:\install\微信web开发者工具\dll;C:\Users\programmer\AppData\Local\Microsoft\WindowsApps;E:\install\Microsoft VS Code\bin;E:\install\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/html-webpack-plugin: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:31181
+      at ClientRequest.onError (E:\install\nvm\v16.13.1\node_modules\yarn\lib\cli.js:152369:17)
+      at Object.onceWrapper (node:events:510:26)
+      at ClientRequest.emit (node:events:390:28)
+      at Socket.socketErrorListener (node:_http_client:447:9)
+      at Socket.emit (node:events:390:28)
+      at emitErrorNT (node:internal/streams/destroy:157:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack",
+      "dev": "webpack-dev-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "html-webpack-plugin": "^5.5.0",
+      "user-agent": "^1.0.4",
+      "webpack": "^5.73.0",
+      "webpack-cli": "^4.10.0",
+      "webpack-dev-server": "^4.9.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
