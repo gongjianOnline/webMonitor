@@ -59,7 +59,7 @@ export function injectJsError() {
           column = matchResult[3];
         }
         stack = getLines(reason.stack);
-        console.log(stack);
+        // console.log(stack);
       }
       let log = {
         kind: "stability", // 监控指标的大类
@@ -71,7 +71,7 @@ export function injectJsError() {
         stack: stack, // 堆栈信息
         selector: lastEvent ? getSelector(lastEvent.path) : "", // 最后一个操作的元素
       };
-      console.log("promiseError", log);
+      // console.log("promiseError", log);
     },
     true
   );

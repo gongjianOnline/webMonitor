@@ -43,7 +43,7 @@ export function blankScreen() {
                 viewPoint: window.innerWidth + "X" + window.innerHeight,
                 selector: getSelector(centerElements[0])
             };
-            console.log("白屏渲染",log)
+            // console.log("白屏渲染",log)
         }
     });
 

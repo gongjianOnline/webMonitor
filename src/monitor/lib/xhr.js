@@ -32,7 +32,7 @@ export default function injectXHR(){
           response:this.response?JSON.stringify(this.response):"", // 响应体
           params:body || ""
         }
-        console.log('请求接口监听上报',log)
+        // console.log('请求接口监听上报',log)
       }
       this.addEventListener('load',handler("load"),false);
       this.addEventListener("error",handler("error"),false)

@@ -43,7 +43,7 @@ export default function timing(){
           startTime:firstInput.startTime, // 反射弧时间
           selector:lastEvent?getSelector(lastEvent.path || lastEvent.target) : "", // 点击的元素
         }
-        console.log("首次交互时长",log)
+        // console.log("首次交互时长",log)
       }
     }
     observer.disconnect(); //取消观察
@@ -78,7 +78,7 @@ export default function timing(){
         timeToInteractive:domInteractive - fetchStart, // 首次可交互时间
         loadTime:loadEventStart - fetchStart, // 完整的加载时间
       }
-      console.log("用户体验监控",log)
+      // console.log("用户体验监控",log)
       // 监控性能指标
       let FP = performance.getEntriesByName("first-paint")[0]
       let FCP = performance.getEntriesByName("first-contentful-paint")[0];
@@ -87,10 +87,10 @@ export default function timing(){
         type:'paint', // 统计每个阶段的时间
         firstPaint:FP.startTime, // 首次绘制时间
         firstContentPaint:FCP.startTime, // 首次内容绘制时间
-        firstMeaningfulPaint:FMP.startTime, // 首次意义绘制时间
-        largestContentfulPaint:LCP.startTime, //最大内容渲染时间
+        firstMeaningfulPaint:FMP?.startTime || 0, // 首次意义绘制时间
+        largestContentfulPaint:LCP?.startTime || 0, //最大内容渲染时间
       }
-      console.log("-----性能监控---",paint_log)
+      // console.log("-----性能监控---",paint_log)
     },3000)
   })
 }
