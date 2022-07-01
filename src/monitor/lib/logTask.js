@@ -18,7 +18,7 @@ export default function longTask(){
             duration:formatTime(item.duration), // duration 表示该事件执行了多少时间
             selector:lastEvent?getSelector(lastEvent.path || lastEvent.target) : ''
           }
-          console.log("卡顿监测",log)
+          // console.log("卡顿监测",log)
         })
       }
     })
