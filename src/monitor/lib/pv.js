@@ -16,4 +16,19 @@ export default function pv(){
     ...getTerminal
   }
   console.log("打印设备信息",equipmentLog)
+
+  // 监控用户浏览时间
+  let startTime = Date.now();
+  window.addEventListener("unload",()=>{
+    let stayTime = Date.now() - startTime;
+    let browseLog = {
+        kind: 'business',
+        type: 'stayTime',
+        stayTime
+    };
+    console.log("监控页面浏览时间",browseLog)
+  },false)
+
+
+
 }
