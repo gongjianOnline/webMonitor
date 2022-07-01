@@ -49,9 +49,8 @@ export default function timing(){
     observer.disconnect(); //取消观察
   }).observe({type:"first-input",buffered:true}); // 观察第一次交互
 
-
-
   onload(function(){
+    var perfEntries = performance.getEntriesByType("navigation");
     setTimeout(()=>{
       const {
         fetchStart,
@@ -65,7 +64,7 @@ export default function timing(){
         domContentLoadedEventStart,
         domContentLoadedEventEnd,
         loadEventStart
-      } = performance.timing;
+      } = perfEntries[0];
       
       let log = {
         kind:"experience",
