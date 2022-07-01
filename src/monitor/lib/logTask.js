@@ -1,3 +1,7 @@
+/**
+ * 监控页面卡断模块
+ * 
+ */
 import getLastEvent from "../utils/getLastEvent"
 import getSelector from "../utils/getSelector"
 import formatTime from "../utils/formatTime"
