@@ -59,7 +59,6 @@ export default function timing(){
         requestStart,
         responseStart,
         responseEnd,
-        domLoading,
         domInteractive,
         domContentLoadedEventStart,
         domContentLoadedEventEnd,
@@ -72,12 +71,11 @@ export default function timing(){
         connectTime:connectStart -connectEnd , //连接时间
         ttfbTime:responseStart - requestStart, // 首字节到达时间
         responseTime:responseEnd - responseStart, // 响应的读取时间
-        parseDOMTime:loadEventStart - domLoading, // DOM解析时间
         domContentLoadedTime:domContentLoadedEventEnd - domContentLoadedEventStart,// 资源全部加载完成时间
         timeToInteractive:domInteractive - fetchStart, // 首次可交互时间
         loadTime:loadEventStart - fetchStart, // 完整的加载时间
       }
-      // console.log("用户体验监控",log)
+      console.log("用户体验监控",log)
       // 监控性能指标
       let FP = performance.getEntriesByName("first-paint")[0]
       let FCP = performance.getEntriesByName("first-contentful-paint")[0];
